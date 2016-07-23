@@ -92,6 +92,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libxml2 \
     camera.msm8226 \
+    libstlport \
     Camera2
 
 # Connectivity Engine support
