@@ -95,7 +95,9 @@ PRODUCT_PACKAGES += \
     camera.msm8226 \
     libstlport \
     libboringssl-compat \
-    Camera2
+    Camera2 \
+    libxml2 \
+    Snap
 
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
@@ -151,18 +153,8 @@ PRODUCT_PACKAGES += \
 
 # FM
 PRODUCT_PACKAGES += \
-    FM2 \
-    FMRecord \
-    libqcomfm_jni \
-    qcom.fmradio \
-    qcom.fmradio.xml
-
-# GPS
-PRODUCT_PACKAGES += \
-    libgps.utils \
-    gps.msm8226 \
-    libloc_core \
-    libloc_eng
+    FMRadio \
+    libfmjni
 
 # LOWI
 PRODUCT_COPY_FILES += \
@@ -187,6 +179,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
     $(LOCAL_PATH)/etc/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/etc/media_profiles.xml:system/etc/media_profiles.xml
 
 # frandom
@@ -200,26 +193,16 @@ PRODUCT_PACKAGES += \
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
-    libdashplayer \
     libdivxdrmdecrypt \
-    libOmxAacEnc \
-    libOmxAmrEnc \
     libOmxCore \
     libOmxMux \
-    libOmxEvrcEnc \
-    libOmxQcelp13Enc \
     libOmxVdec \
-    libOmxVdecHevc \
     libOmxVenc \
     libHevcSwDecoder \
-    libstagefrighthw \
-    qcmediaplayer
+    libstagefrighthw
 
 PRODUCT_PACKAGES += \
     X9180Settings
-
-PRODUCT_BOOT_JARS += \
-    qcmediaplayer
 
 PRODUCT_BOOT_JARS += \
     qcom.fmradio
@@ -230,6 +213,10 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     power.msm8226
+
+# Radio
+PRODUCT_PACKAGES += \
+    libril_shim
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -329,7 +316,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/etc/hcidump.sh:system/etc/hcidump.sh \
     $(LOCAL_PATH)/etc/hsic.control.bt.sh:system/etc/hsic.control.bt.sh \
     $(LOCAL_PATH)/etc/init.ath3k.bt.sh:system/etc/init.ath3k.bt.sh \
-    $(LOCAL_PATH)/etc/init.crda.sh:system/etc/init.crda.sh \
     $(LOCAL_PATH)/etc/init.qcom.audio.sh:system/etc/init.qcom.audio.sh \
     $(LOCAL_PATH)/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
     $(LOCAL_PATH)/etc/init.qcom.coex.sh:system/etc/init.qcom.coex.sh \

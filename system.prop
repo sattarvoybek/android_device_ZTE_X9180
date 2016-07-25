@@ -3,6 +3,10 @@
 # radio
 rild.libargs=-d /dev/smd0
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
+ro.telephony.ril.config=simactivation
+
+# Strict Mode
+persist.sys.strictmode.disable=true
 
 tunnel.audio.encode = true
 
@@ -36,7 +40,13 @@ persist.factory.nfc=false
 persist.factory.receiver_volume=10
 persist.fuse_sdcard=false
 
-persist.radio.multisim.config=dsds
+# Dalvik
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapgrowthlimit=128m
+dalvik.vm.heapsize=512m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=2m
+dalvik.vm.heapmaxfree=8m
 
 persist.sys.bluetooth.name=ZTE V5
 

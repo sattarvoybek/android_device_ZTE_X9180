@@ -1,7 +1,3 @@
-# Set default USB interface
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp,adb
-
 PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
 
@@ -91,6 +87,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
+    ro.disableWifiApFirmwareReload=true \
     wifi.supplicant_scan_interval=60
 
 PRODUCT_PROPERTY_OVERRIDES += \

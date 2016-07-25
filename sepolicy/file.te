@@ -7,3 +7,4 @@ type persist_proxcal_file, file_type;
 type fastcharge_sysfs, sysfs_type, file_type;
 type boost_sysfs, sysfs_type, file_type;
 type usbkeyboard_device, file_type;
+type vcs_data_file, file_type, data_file_type;
